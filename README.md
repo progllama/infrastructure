@@ -1,6 +1,6 @@
-# Project Title
+# Url Plumber' infra settings
 
-One Paragraph of project description goes here
+Infrastructure as code.
 
 ## Getting Started
 
@@ -10,8 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-Give examples
+```txt
+docker
+docker-compose
+make
 ```
 
 ### Installing
@@ -20,13 +22,13 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-```
+```txt
 Give the example
 ```
 
 And repeat
 
-```
+```txt
 until finished
 ```
 
@@ -40,7 +42,7 @@ Explain how to run the automated tests for this system
 
 Explain what these tests test and why
 
-```
+```txt
 Give an example
 ```
 
@@ -48,7 +50,7 @@ Give an example
 
 Explain what these tests test and why
 
-```
+```txt
 Give an example
 ```
 

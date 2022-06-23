@@ -1,0 +1,13 @@
+{
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:infra}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    },
+    "cSpell.ignoreWords": [
+        "Dropwizard"
+    ]
+}
