@@ -9,20 +9,13 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
   app:
-    build:
-      context: .
-      dockerfile: ./app/Dockerfile
-    command: go run main.go
+    image: alpine
     ports:
       - 8000:8000
-    working_dir: /go/src/app
-    environment:
-      DBMS: postgres
-      HOST: postgres
-      PORT: 5432
-      USER: plumber
-      DBNAME: plumber
-      PASSWORD: HAUcf&-LrHu?[/J5
+    volumes:
+      - ./app:/app
+    command: ./main
+    working_dir: /app/bin
 
   postgres:
     image: postgres:alpine
@@ -32,11 +25,11 @@ services:
     volumes:
       - postgres:/var/lib/postgres
     environment:
-      LANG: ja_JP.utf8
-      POSTGRES_USER: plumber
-      POSTGRES_DB: plumber
-      POSTGRES_PASSWORD: HAUcf&-LrHu?[/J5
-      TZ: Asia/Tokyo
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGPASSWORD: ${PGPASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: "Asia/Tokyo"
 
   redis:
     image: redis:alpine
